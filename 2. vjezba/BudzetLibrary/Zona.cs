@@ -8,9 +8,14 @@ namespace BudzetLibrary
 {
     public abstract class Zona
     {
-        public string Oznaka { get; set; }  
+        public string Oznaka { get; set; }
         public List<Prostor> popisProstora { get; set; }
 
+        public Zona(string oznaka, List<Prostor> prostori)
+        {
+            Oznaka = oznaka;
+            popisProstora = prostori;
+        }
         public void dodajProstor(Prostor prostor)
         {
             popisProstora.Add(prostor);
