@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gradevina__Zadatak_1_
 {
-    internal class UnutarnjiProstor : Prostor
+    public class UnutarnjiProstor : Prostor
     {
         public UnutarnjiProstor(string oznaka, double povrsina) : base(oznaka, povrsina) { }
 

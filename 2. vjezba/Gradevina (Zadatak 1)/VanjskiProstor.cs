@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gradevina__Zadatak_1_
 {
-    internal class VanjskiProstor : Prostor
+    public class VanjskiProstor : Prostor
     {   
         public bool Natkriven {  get; }
 

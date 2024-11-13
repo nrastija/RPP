@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gradevina__Zadatak_1_
 {
-    internal class Gradevina
+    public class Gradevina
     {
         private string naziv;
 
@@ -56,7 +56,7 @@ namespace Gradevina__Zadatak_1_
             }
         }
 
-        public double dohvatiVlastituNetoPovrsinu(Prostor prostor)
+        public double dohvatiVlastituNetoPovrsinu()
         {
             return prostori.Sum(p => p.IzracunajNetoPovrsinu());
         }
