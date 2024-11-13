@@ -8,9 +8,9 @@ namespace Gradevina__Zadatak_1_
 {
     internal class UnutarnjiProstor : Prostor
     {
-        public UnutarnjiProstor(String oznaka, Decimal povrsina) : base(oznaka, povrsina) { }
+        public UnutarnjiProstor(string oznaka, double povrsina) : base(oznaka, povrsina) { }
 
-        public override decimal IzracunajNetoPovrsinu()
+        public override double IzracunajNetoPovrsinu()
         {
             return Povrsina;
         }

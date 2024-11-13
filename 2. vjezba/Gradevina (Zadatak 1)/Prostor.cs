@@ -10,9 +10,9 @@ namespace Gradevina__Zadatak_1_
     public abstract class Prostor
     {
         public string Oznaka { get;}
-        public decimal Povrsina { get;  }
+        public double Povrsina { get;  }
 
-        public Prostor(String oznaka, Decimal povrsina)
+        public Prostor(string oznaka, double povrsina)
         {
             if (string.IsNullOrEmpty(oznaka))
             {
@@ -26,6 +26,6 @@ namespace Gradevina__Zadatak_1_
             Oznaka = oznaka;
             Povrsina = povrsina;
         }
-        public abstract decimal IzracunajNetoPovrsinu();
+        public abstract double IzracunajNetoPovrsinu();
     }
 }
