@@ -14,6 +14,7 @@ namespace MessagingSystem
     public partial class FrmMessanger : Form
     {
         private UserRepository repozitorij = new UserRepository();
+        List<User> filtriraneOsobe;
         public FrmMessanger()
         {
             InitializeComponent();
@@ -32,7 +33,15 @@ namespace MessagingSystem
 
         private void BtnPretrazi_Click(object sender, EventArgs e)
         {
-            
+            if (filtriraneOsobe.Any()) dgvUsers.DataSource = filtriraneOsobe;
+            else dgvUsers.DataSource = repozitorij;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string unos = txtSearch.Text;
+
+            filtriraneOsobe = repozitorij.Users.Where(osoba => $"{osoba.FirstName} {osoba.LastName}" == unos).ToList();
         }
     }
 }

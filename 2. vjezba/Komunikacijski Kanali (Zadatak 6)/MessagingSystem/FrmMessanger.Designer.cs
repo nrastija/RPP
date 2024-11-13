@@ -37,9 +37,9 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtMessage = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.rbEmail = new System.Windows.Forms.RadioButton();
             this.rbSMS = new System.Windows.Forms.RadioButton();
+            this.rbEmail = new System.Windows.Forms.RadioButton();
+            this.btnSend = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -78,6 +78,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(193, 22);
             this.txtSearch.TabIndex = 2;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label1
             // 
@@ -140,6 +141,28 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Messaging channels:";
             // 
+            // rbSMS
+            // 
+            this.rbSMS.AutoSize = true;
+            this.rbSMS.Location = new System.Drawing.Point(26, 61);
+            this.rbSMS.Name = "rbSMS";
+            this.rbSMS.Size = new System.Drawing.Size(61, 20);
+            this.rbSMS.TabIndex = 1;
+            this.rbSMS.TabStop = true;
+            this.rbSMS.Text = "SMS";
+            this.rbSMS.UseVisualStyleBackColor = true;
+            // 
+            // rbEmail
+            // 
+            this.rbEmail.AutoSize = true;
+            this.rbEmail.Location = new System.Drawing.Point(26, 35);
+            this.rbEmail.Name = "rbEmail";
+            this.rbEmail.Size = new System.Drawing.Size(66, 20);
+            this.rbEmail.TabIndex = 0;
+            this.rbEmail.TabStop = true;
+            this.rbEmail.Text = "Email";
+            this.rbEmail.UseVisualStyleBackColor = true;
+            // 
             // btnSend
             // 
             this.btnSend.Location = new System.Drawing.Point(657, 412);
@@ -150,28 +173,6 @@
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.BtnSend_Click);
-            // 
-            // rbEmail
-            // 
-            this.rbEmail.AutoSize = true;
-            this.rbEmail.Location = new System.Drawing.Point(26, 35);
-            this.rbEmail.Name = "rbEmail";
-            this.rbEmail.Size = new System.Drawing.Size(62, 20);
-            this.rbEmail.TabIndex = 0;
-            this.rbEmail.TabStop = true;
-            this.rbEmail.Text = "Email";
-            this.rbEmail.UseVisualStyleBackColor = true;
-            // 
-            // rbSMS
-            // 
-            this.rbSMS.AutoSize = true;
-            this.rbSMS.Location = new System.Drawing.Point(26, 61);
-            this.rbSMS.Name = "rbSMS";
-            this.rbSMS.Size = new System.Drawing.Size(57, 20);
-            this.rbSMS.TabIndex = 1;
-            this.rbSMS.TabStop = true;
-            this.rbSMS.Text = "SMS";
-            this.rbSMS.UseVisualStyleBackColor = true;
             // 
             // FrmMessanger
             // 
