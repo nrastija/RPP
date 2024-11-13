@@ -1,4 +1,5 @@
-﻿using DataLayer;
+﻿using ClassLibrary1;
+using DataLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace MessengerLib
 {
-    public class SMS : Email
+    public class SMS : IKanal
     {
-        public string saljiPoruku(User user, string poruka)
+        public new string saljiPoruku(User user, string poruka)
         {
             if (!Validacija(user, poruka))
             {
@@ -19,7 +20,7 @@ namespace MessengerLib
             return $"SMS sent to {user.Phone} with message: {poruka}";
         }
 
-        protected override bool Validacija(User user, string poruka)
+        protected bool Validacija(User user, string poruka)
         {
             return user != null && !string.IsNullOrWhiteSpace(poruka);
         }

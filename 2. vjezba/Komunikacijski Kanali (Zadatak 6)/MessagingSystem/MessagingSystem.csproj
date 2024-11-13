@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\MessengerLib.csproj">
+      <Project>{4f18ce79-fa94-4c3f-beff-b6f7ff172238}</Project>
+      <Name>MessengerLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{755651D2-4B80-4641-A3F1-60645E625B0B}</Project>
       <Name>DataLayer</Name>

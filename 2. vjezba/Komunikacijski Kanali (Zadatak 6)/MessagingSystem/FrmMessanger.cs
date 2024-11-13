@@ -1,4 +1,6 @@
-﻿using DataLayer;
+﻿using ClassLibrary1;
+using DataLayer;
+using MessengerLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +25,22 @@ namespace MessagingSystem
 
         private void BtnSend_Click(object sender, EventArgs e)
         {
-            
+            if (dgvUsers.SelectedRows.Count == 0) { return; }
+
+            var oznaceniKorisnik = dgvUsers.SelectedRows[0].DataBoundItem as User;
+            var poruka = txtMessage.Text;
+
+            IKanal kanal = null;
+
+            if (rbEmail.Checked) kanal = new Email();
+            else if (rbSMS.Checked) kanal = new SMS();
+
+            var messenger = new Messenger(kanal);
+
+            var result = messenger.saljiPoruku(oznaceniKorisnik, poruka);
+
+            MessageBox.Show(result);
+
         }
 
         private void FrmMessanger_Load(object sender, EventArgs e)
