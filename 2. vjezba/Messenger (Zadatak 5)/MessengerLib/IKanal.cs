@@ -8,7 +8,7 @@ using DataLayer;
 
 namespace MessengerLib
 {
-    internal interface IKanal
+    public interface IKanal
     {
         public string posaljiPoruku(User user, String poruka);
     }
