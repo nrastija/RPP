@@ -49,7 +49,7 @@ namespace BudzetLibrary
 
         public List<Prostor> dohvatiSveProstore()
         {
-            return zoneZgrade.SelectMany(zona => zona.popisProstora).ToList();
+            return zoneZgrade.SelectMany(zona => zona.popisProstora).OrderByDescending(zona => zona.Povrsina).ToList();
         }
 
     }

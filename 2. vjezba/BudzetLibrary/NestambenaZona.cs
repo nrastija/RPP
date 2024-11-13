@@ -8,7 +8,7 @@ namespace BudzetLibrary
 {
     public class NestambenaZona : Zona
     {
-        public NestambenaZona(string oznaka, List<Prostor> prostori) : base(oznaka, prostori)
+        public NestambenaZona(string oznaka) : base(oznaka)
         {
         }
 

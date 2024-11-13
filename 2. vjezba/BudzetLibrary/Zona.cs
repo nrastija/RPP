@@ -9,12 +9,11 @@ namespace BudzetLibrary
     public abstract class Zona
     {
         public string Oznaka { get; set; }
-        public List<Prostor> popisProstora { get; set; }
+        public List<Prostor> popisProstora { get; set; } = new List<Prostor>();
 
-        public Zona(string oznaka, List<Prostor> prostori)
+        public Zona(string oznaka)
         {
             Oznaka = oznaka;
-            popisProstora = prostori;
         }
         public void dodajProstor(Prostor prostor)
         {

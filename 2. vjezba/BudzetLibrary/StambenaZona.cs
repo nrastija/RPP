@@ -8,7 +8,7 @@ namespace BudzetLibrary
 {
     public class StambenaZona : Zona
     {
-        public StambenaZona(string oznaka, List<Prostor> prostori) : base(oznaka, prostori)
+        public StambenaZona(string oznaka) : base(oznaka)
         {
         }
 
