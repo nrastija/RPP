@@ -1,14 +1,10 @@
 ﻿using DataLayer;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MessengerLib;
 
 namespace MessagingSystem
 {
@@ -23,7 +19,10 @@ namespace MessagingSystem
 
         private void BtnSend_Click(object sender, EventArgs e)
         {
+            var oznacenaOsoba = dgvUsers.SelectedRows[0];
+            var message = txtMessage.Text;
 
+            
         }
 
         private void FrmMessanger_Load(object sender, EventArgs e)

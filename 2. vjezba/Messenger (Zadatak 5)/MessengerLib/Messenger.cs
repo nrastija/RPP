@@ -1,4 +1,4 @@
-﻿using DataLayer;
+﻿using SharedModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace MessengerLib
             _listaKanala = listaKanala;
         }
 
-        public string saljiPoruke(User user, string poruka)
+        public string saljiPoruke(UserShared user, string poruka)
         {
             StringBuilder report = new StringBuilder();
 

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataLayer;
+using SharedModels;
 
 namespace MessengerLib
 {
     public class Email : IKanal
     {
-        public string posaljiPoruku(User user, string poruka)
+        public string posaljiPoruku(UserShared user, string poruka)
         {
             if (string.IsNullOrEmpty(user.Email))
             {

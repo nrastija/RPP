@@ -1,4 +1,4 @@
-﻿using DataLayer;
+﻿using SharedModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace MessengerLib
 {
     public class SMS : IKanal
     {
-        public string posaljiPoruku(User user, string poruka)
+        public string posaljiPoruku(UserShared user, string poruka)
         {
             if (string.IsNullOrEmpty(user.Phone))
             {

@@ -1,4 +1,4 @@
-﻿namespace MessengerLib
+﻿namespace SharedModels
 {
     public class Class1
     {

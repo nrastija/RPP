@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MessagingSystem\MessagingSystem.csproj" />
-    <ProjectReference Include="..\SharedModels\SharedModels.csproj" />
-  </ItemGroup>
-
 </Project>
