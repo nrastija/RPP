@@ -1,10 +1,11 @@
 ﻿using DataLayer;
+using MessengerLib;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using MessengerLib;
+
 
 namespace MessagingSystem
 {
@@ -19,10 +20,27 @@ namespace MessagingSystem
 
         private void BtnSend_Click(object sender, EventArgs e)
         {
-            var oznacenaOsoba = dgvUsers.SelectedRows[0];
-            var message = txtMessage.Text;
+            if (dgvUsers.SelectedRows.Count > 0)
+            {
+                var oznacenaOsoba = dgvUsers.SelectedRows[0].DataBoundItem as User;
+                var message = txtMessage.Text;
 
-            
+                var kanali = new List<IKanal>();
+
+                if (chkEmail.Checked) kanali.Add(new Email());
+                if (chkSMS.Checked) kanali.Add(new SMS());
+                if (chkViber.Checked) kanali.Add(new Viber());
+
+                var messenger = new Messenger(kanali);
+                var result = messenger.saljiPoruke(oznacenaOsoba, message);
+
+                MessageBox.Show(result);
+            }
+            else
+            {
+                MessageBox.Show("Molimo odaberite korisnika iz liste.");
+            }
+                
         }
 
         private void FrmMessanger_Load(object sender, EventArgs e)
