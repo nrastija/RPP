@@ -45,6 +45,7 @@
     <Compile Include="IKanal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Email.cs" />
+    <Compile Include="SMS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
