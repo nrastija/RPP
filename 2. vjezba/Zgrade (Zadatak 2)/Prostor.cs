@@ -11,7 +11,7 @@ namespace Zgrade__Zadatak_2_
         public string Oznaka { get; }
         public int Kat { get; }
         public float Povrsina { get; }
-        public bool Slobodan { get; set; }
+        public bool Slobodan { get; set; } = true;
 
         private int cijena;
         public int Cijena { 
@@ -36,5 +36,6 @@ namespace Zgrade__Zadatak_2_
         }
 
         public abstract double izracunajProdajnuCijenu();
+
     }
 }
