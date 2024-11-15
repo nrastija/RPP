@@ -1,0 +1,17 @@
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna_Brava.frmMain.resources
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.csproj.GenerateResource.cache
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.AssemblyInfoInputs.cache
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.AssemblyInfo.cs
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.csproj.CoreCompileInputs.cache
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.sourcelink.json
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\bin\Debug\net8.0-windows\Digitalna Brava.exe
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\bin\Debug\net8.0-windows\Digitalna Brava.deps.json
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\bin\Debug\net8.0-windows\Digitalna Brava.runtimeconfig.json
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\bin\Debug\net8.0-windows\Digitalna Brava.dll
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\bin\Debug\net8.0-windows\Digitalna Brava.pdb
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.dll
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\refint\Digitalna Brava.dll
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.pdb
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\Digitalna Brava.genruntimeconfig.cache
+D:\Projects\RPP\Digitalna Brava\Digitalna Brava\obj\Debug\net8.0-windows\ref\Digitalna Brava.dll
