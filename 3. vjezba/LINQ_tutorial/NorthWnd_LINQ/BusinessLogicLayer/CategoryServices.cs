@@ -30,7 +30,7 @@ namespace BusinessLogicLayer
         {
             bool isSuccessful = false;
 
-            using (var repo = new ProductRepository())
+            using (var repo = new CategoryRepository())
             {
                 int affectedRows = repo.Add(category);
                 isSuccessful = affectedRows > 0;

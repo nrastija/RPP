@@ -32,7 +32,7 @@ namespace DataAccessLayer.Repositories
                 return 0;
             }
         }
-        public IQueryable<Supplier> GetCategoriesByName(string phrase)
+        public IQueryable<Supplier> GetSuppliersByName(string phrase)
         {
             var query = from s in Entities
                 where s.CompanyName.Contains(phrase)
