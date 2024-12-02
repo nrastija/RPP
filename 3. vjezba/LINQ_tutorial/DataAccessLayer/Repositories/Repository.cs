@@ -46,7 +46,7 @@ namespace DataAccessLayer.Repositories
 
         public abstract int Update(T entity, bool saveChanges = true);
 
-        public abstract int Remove(T entity, bool saveChanges = true)
+        public virtual int Remove(T entity, bool saveChanges = true)
         {
             Entities.Attach(entity);
             Entities.Remove(entity);
