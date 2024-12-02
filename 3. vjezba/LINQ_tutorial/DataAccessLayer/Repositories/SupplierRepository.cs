@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    internal class SupplierRepository : Repository<Supplier>
+    public class SupplierRepository : Repository<Supplier>
     {
         public SupplierRepository() : base(new NorthwndModel())
         {

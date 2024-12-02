@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    internal class CategoryRepository : Repository<Category>
+    public class CategoryRepository : Repository<Category>
     {
         public CategoryRepository() : base(new NorthwndModel())
         {
@@ -36,6 +36,13 @@ namespace DataAccessLayer.Repositories
             var query = from c in Entities
                 where c.CategoryName.Contains(phrase)
                 select c;
+            return query;
+        }
+        public IQueryable<int> GetNumberOfProducts(Category category)
+        {
+            var query = from c in Entities
+                where c.CategoryID == category.CategoryID
+                select c.Products.Count;
             return query;
         }
     }
