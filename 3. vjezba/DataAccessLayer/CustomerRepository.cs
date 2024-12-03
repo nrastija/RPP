@@ -10,7 +10,7 @@ namespace DataAccessLayer
     {
         public CustomerRepository() : base(new Model1())
         {
-            
+
         }
 
         public override IQueryable<Customer> GetAll()
@@ -22,6 +22,12 @@ namespace DataAccessLayer
         public IQueryable<Customer> GetCustomersByCounty(string country)
         {
             var query = from e in Entities where e.Country == country select e;
+            return query;
+        }
+
+        public IQueryable<string>  GetCountries()
+        {
+            var query = from e in Entities select e.Country;
             return query;
         }
     }
