@@ -27,12 +27,14 @@ namespace Zadatak3_2
 
         private void LoadCountries()
         {
-            
+            List<string> countryList = services.GetCountries();
+            cmbCountry.DataSource = countryList;
         }
 
         private void LoadCities()
         {
-
+            List<string> cityList = services.GetCities();
+            cmbCity.DataSource = cityList;
         }
     }
 }
