@@ -9,7 +9,7 @@ namespace BusinessLogicLayer
 {
     public class CustomerServices
     {
-        List<Customer> getCustomers()
+        public List<Customer> GetCustomers()
         {
             using (var repo = new CustomerRepository())
             {
@@ -30,6 +30,14 @@ namespace BusinessLogicLayer
 
             return isSuccessful;
         }
-        
+
+        public bool CustomerExists(string customerID)
+        {
+            using (var repo = new CustomerRepository())
+            {
+                return repo.GetAll().Any(c => c.CustomerID == customerID);
+            }
+        }
+
     }
 }
