@@ -17,5 +17,23 @@ namespace BusinessLogicLayer
                 return customers;
             }
         }
+
+        public List<string> GetCountries()
+        {
+            using (var repo = new CustomerRepository())
+            {
+                List<string> countries = repo.GetCountries().ToList();
+                return countries;
+            }
+        }
+
+        public List<string> GetCities()
+        {
+            using (var repo = new CustomerRepository())
+            {
+                List<string> cities = repo.GetCities().ToList();
+                return cities;
+            }
+        }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblCountry = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCountry = new System.Windows.Forms.ComboBox();
             this.lblCity = new System.Windows.Forms.Label();
             this.cmbCity = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,68 +40,73 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 68);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1054, 464);
+            this.dataGridView1.Size = new System.Drawing.Size(1186, 580);
             this.dataGridView1.TabIndex = 0;
             // 
             // lblCountry
             // 
             this.lblCountry.AutoSize = true;
-            this.lblCountry.Location = new System.Drawing.Point(401, 20);
+            this.lblCountry.Location = new System.Drawing.Point(451, 25);
             this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(55, 16);
+            this.lblCountry.Size = new System.Drawing.Size(68, 20);
             this.lblCountry.TabIndex = 1;
             this.lblCountry.Text = "Country:";
             // 
-            // comboBox1
+            // cmbCountry
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(459, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 24);
-            this.comboBox1.TabIndex = 2;
+            this.cmbCountry.FormattingEnabled = true;
+            this.cmbCountry.Location = new System.Drawing.Point(516, 21);
+            this.cmbCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbCountry.Name = "cmbCountry";
+            this.cmbCountry.Size = new System.Drawing.Size(168, 28);
+            this.cmbCountry.TabIndex = 2;
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(625, 20);
+            this.lblCity.Location = new System.Drawing.Point(703, 25);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(32, 16);
+            this.lblCity.Size = new System.Drawing.Size(39, 20);
             this.lblCity.TabIndex = 3;
             this.lblCity.Text = "City:";
             // 
             // cmbCity
             // 
             this.cmbCity.FormattingEnabled = true;
-            this.cmbCity.Location = new System.Drawing.Point(663, 17);
+            this.cmbCity.Location = new System.Drawing.Point(746, 21);
+            this.cmbCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(150, 24);
+            this.cmbCity.Size = new System.Drawing.Size(168, 28);
             this.cmbCity.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(833, 13);
+            this.button1.Location = new System.Drawing.Point(937, 16);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 31);
+            this.button1.Size = new System.Drawing.Size(196, 39);
             this.button1.TabIndex = 5;
             this.button1.Text = "Show customers";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1078, 514);
+            this.ClientSize = new System.Drawing.Size(1213, 642);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbCity);
             this.Controls.Add(this.lblCity);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbCountry);
             this.Controls.Add(this.lblCountry);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMain";
             this.Text = "Customers";
             this.Load += new System.EventHandler(this.FrmMain_Load);
@@ -115,7 +120,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblCountry;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCountry;
         private System.Windows.Forms.Label lblCity;
         private System.Windows.Forms.ComboBox cmbCity;
         private System.Windows.Forms.Button button1;
