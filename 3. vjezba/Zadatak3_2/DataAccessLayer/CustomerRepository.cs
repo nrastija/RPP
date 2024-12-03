@@ -21,13 +21,13 @@ namespace DataAccessLayer
 
         public IQueryable<string> GetCountries()
         {
-            var query = from c in Entities select c.Country;
+            var query = (from c in Entities select c.Country).Distinct();
             return query;
         }
 
         public IQueryable<string> GetCities()
         {
-            var query = from c in Entities select c.City;
+            var query = (from c in Entities select c.City).Distinct();
             return query;
         }
     }
