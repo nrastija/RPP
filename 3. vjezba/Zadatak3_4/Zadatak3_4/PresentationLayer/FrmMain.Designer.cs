@@ -161,6 +161,7 @@
             btnRemove.TabIndex = 9;
             btnRemove.Text = "Remove customer";
             btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.Click += btnRemove_Click;
             // 
             // FrmMain
             // 

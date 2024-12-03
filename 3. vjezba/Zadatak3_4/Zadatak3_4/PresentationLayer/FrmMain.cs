@@ -45,7 +45,7 @@ namespace PresentationLayer
                     MessageBox.Show("ID ima više od 5 znamenaka");
                     return;
                 }
-                
+
                 services.AddCusomter(customer);
                 GetCustomers();
             }
@@ -60,5 +60,24 @@ namespace PresentationLayer
             return services.CheckIfCustomerExists(ID);
         }
 
+        private Customer GetSelectedCustomer()
+        {
+            return dgvCustomers.CurrentRow.DataBoundItem as Customer;
+        }
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            Customer selectedCustomer = GetSelectedCustomer();
+
+            if (selectedCustomer != null)
+            {
+                services.RemoveCustomer(selectedCustomer);
+            }
+            else
+            {
+                MessageBox.Show("Potrebno je označiti kupca za brisanje!");
+            }
+
+            GetCustomers();
+        }
     }
 }
