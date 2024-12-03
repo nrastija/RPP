@@ -46,7 +46,9 @@
             // 
             // dgvCustomers
             // 
+            dgvCustomers.BackgroundColor = SystemColors.AppWorkspace;
             dgvCustomers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCustomers.GridColor = SystemColors.InactiveCaptionText;
             dgvCustomers.Location = new Point(12, 12);
             dgvCustomers.Name = "dgvCustomers";
             dgvCustomers.RowHeadersWidth = 62;
@@ -80,6 +82,7 @@
             btnAdd.TabIndex = 8;
             btnAdd.Text = "Add customer";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // txtCity
             // 
@@ -171,6 +174,7 @@
             ForeColor = SystemColors.ControlLight;
             Name = "FrmMain";
             Text = "Customers";
+            Load += FrmMain_Load;
             ((System.ComponentModel.ISupportInitialize)dgvCustomers).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

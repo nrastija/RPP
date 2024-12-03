@@ -67,5 +67,10 @@ namespace DataAccessLayer
                 return 0;
             }
         }
+
+        public void Dispose()
+        {
+            Context.Dispose();
+        }
     }
 }

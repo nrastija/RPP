@@ -39,5 +39,13 @@ namespace BusinessLogicLayer
 
             return isSuccessful;
         }
+
+        public bool CheckIfCustomerExists(string ID)
+        {
+            using (var repo = new CustomerRepository())
+            {
+                return repo.GetAll().Any(c => c.CustomerID == ID);
+            }
+        }
     }
 }
