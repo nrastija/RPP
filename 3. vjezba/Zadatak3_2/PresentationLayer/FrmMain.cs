@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogicLayer;
+using DataAccessLayer;
 
 namespace Zadatak3_2
 {
@@ -22,7 +23,6 @@ namespace Zadatak3_2
         private void FrmMain_Load(object sender, EventArgs e)
         {
             LoadCountries();
-            LoadCities();
         }
 
         private void LoadCountries()
@@ -31,10 +31,25 @@ namespace Zadatak3_2
             cmbCountry.DataSource = countryList;
         }
 
-        private void LoadCities()
+        private void LoadCities(string filter)
         {
-            List<string> cityList = services.GetCities();
+            List<string> cityList = services.GetCities(filter);
             cmbCity.DataSource = cityList;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var filterCountry = cmbCountry.SelectedItem.ToString(); 
+            var filterCity = cmbCity.SelectedItem.ToString();
+            List<Customer> customers = services.GetCustomerByCountryAndCity(filterCountry, filterCity);
+
+            dataGridView1.DataSource = customers;
+        }
+
+        private void cmbCountry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var filterCountry = cmbCountry.SelectedItem.ToString();
+            LoadCities(filterCountry);
         }
     }
 }

@@ -25,9 +25,9 @@ namespace DataAccessLayer
             return query;
         }
 
-        public IQueryable<string> GetCities()
+        public IQueryable<string> GetCities(string country)
         {
-            var query = (from c in Entities select c.City).Distinct();
+            var query = (from c in Entities where c.Country == country select c.City).Distinct();
             return query;
         }
     }

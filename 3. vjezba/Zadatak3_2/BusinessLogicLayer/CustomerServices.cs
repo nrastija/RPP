@@ -27,11 +27,11 @@ namespace BusinessLogicLayer
             }
         }
 
-        public List<string> GetCities()
+        public List<string> GetCities(string country)
         {
             using (var repo = new CustomerRepository())
             {
-                List<string> cities = repo.GetCities().ToList();
+                List<string> cities = repo.GetCities(country).ToList();
                 return cities;
             }
         }

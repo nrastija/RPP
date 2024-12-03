@@ -65,6 +65,7 @@
             this.cmbCountry.Name = "cmbCountry";
             this.cmbCountry.Size = new System.Drawing.Size(168, 28);
             this.cmbCountry.TabIndex = 2;
+            this.cmbCountry.SelectedIndexChanged += new System.EventHandler(this.cmbCountry_SelectedIndexChanged);
             // 
             // lblCity
             // 
@@ -93,6 +94,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Show customers";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmMain
             // 
