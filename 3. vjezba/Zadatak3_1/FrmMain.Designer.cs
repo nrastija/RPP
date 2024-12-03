@@ -71,6 +71,7 @@
             this.btnApply.TabIndex = 3;
             this.btnApply.Text = "Apply filter";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // btnClear
             // 
@@ -80,8 +81,9 @@
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear filter";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // Form1
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,8 +94,9 @@
             this.Controls.Add(this.cmbCountry);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
+            this.Name = "FrmMain";
             this.Text = "Customers";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

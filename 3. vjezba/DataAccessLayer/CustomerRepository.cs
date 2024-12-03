@@ -27,7 +27,7 @@ namespace DataAccessLayer
 
         public IQueryable<string>  GetCountries()
         {
-            var query = from e in Entities select e.Country;
+            var query = (from e in Entities select e.Country).Distinct();
             return query;
         }
     }
