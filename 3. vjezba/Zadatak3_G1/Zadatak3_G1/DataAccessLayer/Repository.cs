@@ -16,14 +16,6 @@ namespace DataAccessLayer
             Entities = Context.Set<T>();
         }
 
-
-        public virtual IQueryable<T> GetAll()
-        {
-            var query = from p in Entities select p;
-            return query;
-        }
-
-
         public void Dispose()
         {
             Context.Dispose();
