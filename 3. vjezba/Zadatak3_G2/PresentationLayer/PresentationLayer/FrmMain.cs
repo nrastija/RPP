@@ -31,11 +31,30 @@ namespace PresentationLayer
             dgvEmployees.DataSource = employees;
         }
 
+        private void GetFilteredEmployees(string city)
+        {
+            List<object> filteredEmployees = services.GetFilteredEmployees(city);
+            dgvEmployees.DataSource = filteredEmployees;
+        }
+
         private void GetAllCities()
         {
             List<string> cities = services.GetCities();
             cmbCity.DataSource = cities;
         }
 
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            if (cmbCity.SelectedItem != "")
+            {
+                string city = cmbCity.SelectedItem.ToString();
+                GetFilteredEmployees(city);
+            }
+            else
+            {
+                MessageBox.Show("Morate odabrati grad");
+                return;
+            }
+    }
     }
 }

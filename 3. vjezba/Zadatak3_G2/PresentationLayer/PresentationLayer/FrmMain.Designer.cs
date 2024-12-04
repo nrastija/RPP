@@ -71,6 +71,7 @@
             this.btnApply.TabIndex = 3;
             this.btnApply.Text = "Apply filter";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // btnClear
             // 
