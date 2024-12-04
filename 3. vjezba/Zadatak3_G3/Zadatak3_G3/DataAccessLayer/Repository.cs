@@ -18,6 +18,11 @@ namespace DataAccessLayer
             Context = context;
             Entities = Context.Set<T>();
         }
+        public int SaveChanges()
+        {
+            return Context.SaveChanges();
+        }
+
         public void Dispose()
         {
             Context.Dispose();
