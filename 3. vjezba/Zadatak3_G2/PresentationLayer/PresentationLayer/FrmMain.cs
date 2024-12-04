@@ -53,8 +53,12 @@ namespace PresentationLayer
             else
             {
                 MessageBox.Show("Morate odabrati grad");
-                return;
             }
     }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            GetAllEmployees();
+        }
     }
 }
