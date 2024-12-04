@@ -81,7 +81,7 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,8 +92,9 @@
             this.Controls.Add(this.cmbCity);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvEmployees);
-            this.Name = "Form1";
+            this.Name = "FrmMain";
             this.Text = "Employees";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
