@@ -30,13 +30,13 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCompany = new System.Windows.Forms.TextBox();
-            this.txtCity = new System.Windows.Forms.TextBox();
-            this.cmbCountry = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.cmbCountry = new System.Windows.Forms.ComboBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
+            this.txtCompany = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(631, 314);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox1
             // 
@@ -67,23 +68,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New supplier:";
             // 
-            // label1
+            // btnAdd
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Company name:";
+            this.btnAdd.Location = new System.Drawing.Point(223, 156);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(127, 29);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Add Supplier";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // label2
+            // cmbCountry
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Country:";
+            this.cmbCountry.FormattingEnabled = true;
+            this.cmbCountry.Location = new System.Drawing.Point(141, 78);
+            this.cmbCountry.Name = "cmbCountry";
+            this.cmbCountry.Size = new System.Drawing.Size(209, 24);
+            this.cmbCountry.TabIndex = 5;
+            // 
+            // txtCity
+            // 
+            this.txtCity.Location = new System.Drawing.Point(141, 112);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(209, 22);
+            this.txtCity.TabIndex = 4;
+            // 
+            // txtCompany
+            // 
+            this.txtCompany.Location = new System.Drawing.Point(141, 45);
+            this.txtCompany.Name = "txtCompany";
+            this.txtCompany.Size = new System.Drawing.Size(209, 22);
+            this.txtCompany.TabIndex = 3;
             // 
             // label3
             // 
@@ -94,36 +109,23 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "City:";
             // 
-            // txtCompany
+            // label2
             // 
-            this.txtCompany.Location = new System.Drawing.Point(141, 45);
-            this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(209, 22);
-            this.txtCompany.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Country:";
             // 
-            // txtCity
+            // label1
             // 
-            this.txtCity.Location = new System.Drawing.Point(141, 112);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(209, 22);
-            this.txtCity.TabIndex = 4;
-            // 
-            // cmbCountry
-            // 
-            this.cmbCountry.FormattingEnabled = true;
-            this.cmbCountry.Location = new System.Drawing.Point(141, 78);
-            this.cmbCountry.Name = "cmbCountry";
-            this.cmbCountry.Size = new System.Drawing.Size(209, 24);
-            this.cmbCountry.TabIndex = 5;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(223, 156);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(127, 29);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Add Supplier";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Company name:";
             // 
             // Form1
             // 
@@ -134,6 +136,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
