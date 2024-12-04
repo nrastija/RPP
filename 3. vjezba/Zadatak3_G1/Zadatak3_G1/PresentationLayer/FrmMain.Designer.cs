@@ -1,6 +1,6 @@
 ﻿namespace PresentationLayer
 {
-    partial class Form1
+    partial class FrmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -89,6 +89,7 @@
             btnApply.TabIndex = 5;
             btnApply.Text = "Apply";
             btnApply.UseVisualStyleBackColor = true;
+            btnApply.Click += btnApply_Click;
             // 
             // bntClear
             // 
@@ -98,8 +99,9 @@
             bntClear.TabIndex = 6;
             bntClear.Text = "Clear";
             bntClear.UseVisualStyleBackColor = true;
+            bntClear.Click += bntClear_Click;
             // 
-            // Form1
+            // FrmMain
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -111,8 +113,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(dgvProducts);
-            Name = "Form1";
+            Name = "FrmMain";
             Text = "Products";
+            Load += FrmMain_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -31,7 +31,7 @@ namespace DataAccessLayer
         public IQueryable<object> GetProductsInRange(int min, int max)
         {
             var query = from p in Entities
-                where p.UnitPrice < min && p.UnitPrice > max
+                where p.UnitPrice > min && p.UnitPrice < max
                 orderby p.UnitPrice
                 select new
                 {
