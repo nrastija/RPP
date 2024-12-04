@@ -20,7 +20,7 @@ namespace DataAccessLayer
             Entities = Context.Set<Customer>();
         }
 
-        public IQueryable<Customer> ShowAllCustomers()
+        public IQueryable<Customer> GetAllCustomers()
         {
             var query = from c in Entities select c;
             return query;
