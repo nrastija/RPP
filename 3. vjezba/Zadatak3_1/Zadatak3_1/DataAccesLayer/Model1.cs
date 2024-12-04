@@ -2,8 +2,9 @@ using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
+using DataAccesLayer;
 
-namespace DataAccesLayer
+namespace DataAccessLayer
 {
     public partial class Model1 : DbContext
     {
