@@ -30,7 +30,16 @@ namespace vj4_zadatak1
 
         private void LoadEmployees()
         {
-            dgEmployees.ItemsSource = db.Employees.ToList();
+            var allEmployees = db.Employees.Select(e => new
+            {
+                e.EmployeeID,
+                e.LastName,
+                e.FirstName,
+                e.City,
+                e.Country,
+                e.ReportsTo
+            });
+            dgEmployees.ItemsSource = allEmployees.ToList();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)

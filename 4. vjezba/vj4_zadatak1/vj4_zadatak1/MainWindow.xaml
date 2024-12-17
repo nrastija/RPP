@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:vj4_zadatak1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel LastChildFill="False">
+
+    <DockPanel LastChildFill="True">
         <StackPanel Width="130" Background="#FFE3F2F4">
             <Label x:Name="lblFeatures" Content="FEATURES" FontWeight="Bold" Background="#FF8BAEDA" HorizontalContentAlignment="Center" Height="35" VerticalContentAlignment="Center"/>
             <Button x:Name="btnShowEmployees" Content="Show employees" Background="#00000000" FontWeight="Bold" BorderThickness="0,0,0,0" FontSize="11" Height="31" Click="btnShowEmployees_Click"/>
