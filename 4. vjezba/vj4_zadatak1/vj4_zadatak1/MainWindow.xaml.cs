@@ -24,5 +24,10 @@ namespace vj4_zadatak1
         {
             InitializeComponent();
         }
+
+        private void btnShowEmployees_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
