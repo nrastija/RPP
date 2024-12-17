@@ -20,6 +20,7 @@ namespace vj4_zadatak3
     /// </summary>
     public partial class ShowEmployees : UserControl
     {
+        private NorthwndModel db = new NorthwndModel();
         public ShowEmployees()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace vj4_zadatak3
 
         private void GetAllEmployees()
         {
-          
+            dgvEmployees.ItemsSource = db.Employees.ToList(); 
         }
     }
 }
