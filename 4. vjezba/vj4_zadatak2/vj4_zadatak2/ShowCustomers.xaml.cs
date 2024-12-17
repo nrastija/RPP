@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -42,12 +43,32 @@ namespace vj4_zadatak2
 
         private void btnNew_Click(object sender, RoutedEventArgs e)
         {
-            
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+
+            if(mainWindow != null)
+            {
+                mainWindow.controlPanel.Content = new NewCustomer();
+            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
+            var selectedCustomer = dgvCustomers.SelectedItem;
 
+            var customerId = selectedCustomer.GetType()
+                .GetProperty("CustomerID")
+                .GetValue(selectedCustomer, null);
+
+            var customer = db.Customers.FirstOrDefault(c => c.CustomerID == customerId);
+
+            if (customer != null)
+            {
+                db.Customers.Remove(customer);
+                db.SaveChanges();
+            }
+
+            
+            LoadCustomers();
         }
     }
 }

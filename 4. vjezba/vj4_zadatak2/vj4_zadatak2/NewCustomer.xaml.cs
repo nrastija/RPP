@@ -20,9 +20,60 @@ namespace vj4_zadatak2
     /// </summary>
     public partial class NewCustomer : UserControl
     {
+        private NorthwndModel db = new NorthwndModel();
         public NewCustomer()
         {
             InitializeComponent();
+            LoadCities();
+            LoadCountries();
+        }
+
+        private void LoadCountries()
+        {
+            var filteredCountries = (db.Customers.Select(c => c.Country)).Distinct();
+            cmbCountry.ItemsSource = filteredCountries.ToList();
+        }
+
+        private void LoadCities()
+        {
+            var filteredCities = (db.Customers.Select(c => c.City)).Distinct();
+            cmbCity.ItemsSource = filteredCities.ToList();
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            var newCustomer = new Customer
+            {
+                CustomerID = txtID.Text,
+                CompanyName = txtCompany.Text,
+                City = cmbCity.SelectedItem.ToString(),
+                Country = cmbCountry.SelectedItem.ToString()
+            };
+
+            if (newCustomer.CustomerID == null || newCustomer.CompanyName == null ||
+                newCustomer.City == null || newCustomer.Country == null)
+            {
+                MessageBox.Show("Molimo unesite sva polja");
+                return;
+            }
+
+            db.Customers.Add(newCustomer);
+            db.SaveChanges();
+
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            if (mainWindow != null)
+            {
+                mainWindow.controlPanel.Content = new ShowCustomers();
+            }
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            if (mainWindow != null)
+            {
+                mainWindow.controlPanel.Content = new ShowCustomers();
+            }
         }
     }
 }
