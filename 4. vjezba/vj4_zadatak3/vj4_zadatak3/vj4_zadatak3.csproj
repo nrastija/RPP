@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4E3C00AC-E1AE-4824-9571-2C62CB62B583}</ProjectGuid>
+    <ProjectGuid>{F79647B2-0E52-471D-A687-0FAED38EC21F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>vj4_zadatak3</RootNamespace>
     <AssemblyName>vj4_zadatak3</AssemblyName>
@@ -46,6 +46,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
