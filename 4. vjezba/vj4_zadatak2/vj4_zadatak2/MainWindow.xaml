@@ -9,10 +9,11 @@
     <DockPanel>
         <StackPanel HorizontalAlignment="Left" Width="150" Background="#FFC7FFB9">
             <Label Content="FEATURES" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FF7BB360"></Label>
-            <Button Content="Show customers" FontWeight="Bold" Background="Transparent" BorderThickness="0"></Button>
+            <Button x:Name="btnShowCustomers" Content="Show customers" FontWeight="Bold" Background="Transparent" BorderThickness="0" Click="btnShowCustomers_Click"></Button>
             <Label Content="------------------------------------"></Label>
-            <Button Content="Exit" FontWeight="Bold" Background="Transparent" BorderThickness="0"></Button>
+            <Button x:Name="btnExit" Content="Exit" FontWeight="Bold" Background="Transparent" BorderThickness="0" Click="btnExit_Click" ></Button>
         </StackPanel>
-
+        
+        <ContentControl x:Name="controlPanel"></ContentControl>
     </DockPanel>
 </Window>

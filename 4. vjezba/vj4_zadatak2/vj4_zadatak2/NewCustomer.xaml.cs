@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace vj4_zadatak2
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NewCustomer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewCustomer : UserControl
     {
-        public MainWindow()
+        public NewCustomer()
         {
             InitializeComponent();
-        }
-
-        
-
-        private void btnExit_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
-        private void btnShowCustomers_Click(object sender, RoutedEventArgs e)
-        {
-            controlPanel.Content = new ShowCustomers();
         }
     }
 }

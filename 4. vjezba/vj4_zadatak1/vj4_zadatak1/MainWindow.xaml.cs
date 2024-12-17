@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace vj4_zadatak2
+namespace vj4_zadatak1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,16 +25,14 @@ namespace vj4_zadatak2
             InitializeComponent();
         }
 
-        
-
-        private void btnExit_Click(object sender, RoutedEventArgs e)
+        private void btnShowEmployees_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            contentPanel.Content = new ShowEmployees();
         }
 
-        private void btnShowCustomers_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            controlPanel.Content = new ShowCustomers();
+            Close();
         }
     }
 }
