@@ -57,7 +57,7 @@ namespace vj4_zadatak2
 
             var customerId = selectedCustomer.GetType()
                 .GetProperty("CustomerID")
-                .GetValue(selectedCustomer, null);
+                .GetValue(selectedCustomer);
 
             var customer = db.Customers.FirstOrDefault(c => c.CustomerID == customerId);
 
