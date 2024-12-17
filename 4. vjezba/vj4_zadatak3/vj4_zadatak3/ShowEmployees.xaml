@@ -10,7 +10,7 @@
         <Label Content="Employees"  DockPanel.Dock="Top" HorizontalContentAlignment="Center" Background="#FF823333" Foreground="White" FontWeight="bold" VerticalAlignment="Top" ></Label>
 
         <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Right" >
-            <Button x:Name="btnDelete" Content="Delete" Background="#FF823333" Foreground="White" Margin="5,0,50,12" FontWeight="bold" Width="100" Height="25"></Button>
+            <Button x:Name="btnDelete" Content="Delete" Background="#FF823333" Foreground="White" Margin="5,0,50,12" FontWeight="bold" Width="100" Height="25" Click="btnDelete_Click"></Button>
         </StackPanel>
 
         <DataGrid x:Name="dgvEmployees" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" ItemsSource="{Binding}" DockPanel.Dock="Top" Margin="50,20,50,10">

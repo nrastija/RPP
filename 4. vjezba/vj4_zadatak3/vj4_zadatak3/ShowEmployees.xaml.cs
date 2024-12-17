@@ -31,5 +31,18 @@ namespace vj4_zadatak3
         {
             dgvEmployees.ItemsSource = db.Employees.ToList(); 
         }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var employee = dgvEmployees.SelectedItem as Employee;
+
+            if (employee != null)
+            {
+                db.Employees.Remove(employee);
+                db.SaveChanges();
+            }
+
+            GetAllEmployees();
+        }
     }
 }
