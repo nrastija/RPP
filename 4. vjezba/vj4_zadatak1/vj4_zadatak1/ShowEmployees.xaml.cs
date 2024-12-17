@@ -20,9 +20,17 @@ namespace vj4_zadatak1
     /// </summary>
     public partial class ShowEmployees : UserControl
     {
+        private Model1 db = new Model1();
         public ShowEmployees()
         {
             InitializeComponent();
+            LoadEmployees();
+
+        }
+
+        private void LoadEmployees()
+        {
+            dgEmployees.ItemsSource = db.Employees.ToList();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
