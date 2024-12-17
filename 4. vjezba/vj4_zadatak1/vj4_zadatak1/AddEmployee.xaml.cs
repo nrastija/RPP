@@ -54,7 +54,7 @@ namespace vj4_zadatak1
                 ReportsTo = txtReportsTo.SelectedValue as int?
             };
 
-            if (employee.ReportsTo == null || (employee.EmployeeID).ToString() == null || employee.FirstName == null ||
+            if (employee.ReportsTo == null || employee.EmployeeID == null || employee.FirstName == null ||
                 employee.LastName == null || employee.City == null || employee.Country == null)
             {
                 MessageBox.Show("Molimo ispunite sva polja");

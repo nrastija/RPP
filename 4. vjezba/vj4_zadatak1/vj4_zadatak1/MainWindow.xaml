@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:vj4_zadatak1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <DockPanel LastChildFill="True">
         <StackPanel Width="130" Background="#FFE3F2F4">
             <Label x:Name="lblFeatures" Content="FEATURES" FontWeight="Bold" Background="#FF8BAEDA" HorizontalContentAlignment="Center" Height="35" VerticalContentAlignment="Center"/>

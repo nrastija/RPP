@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:vj4_zadatak1"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
-    <DockPanel Margin="0,0,1,0" Background="White" LastChildFill="True">
+       
+        <DockPanel Margin="0,0,1,0" Background="White">
         <Label x:Name="txtEmployees" DockPanel.Dock="Top"  Background="#FFE3F2F4" HorizontalContentAlignment="Center" Content="Employees" VerticalAlignment="Top" FontWeight="Bold"/>
         
         <StackPanel x:Name="stack" DockPanel.Dock="Bottom" HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,0,50,10">
