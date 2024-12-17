@@ -13,14 +13,14 @@
             <Button x:Name="btnDelete" Content="Delete" Background="#FF823333" Foreground="White" Margin="5,0,50,12" FontWeight="bold" Width="100" Height="25" Click="btnDelete_Click"></Button>
         </StackPanel>
 
-        <DataGrid x:Name="dgvEmployees" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" ItemsSource="{Binding}" DockPanel.Dock="Top" Margin="50,20,50,10">
+        <DataGrid x:Name="dgvEmployees" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"  DockPanel.Dock="Top" Margin="50,20,50,10">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Path=EmployeeID}" Width="100"/>
-                <DataGridTextColumn Header="LastName" Binding="{Binding Path=LastName}" Width="100"/>
-                <DataGridTextColumn Header="FirstName" Binding="{Binding Path=FirstName}" Width="100"/>
-                <DataGridTextColumn Header="Title" Binding="{Binding Path=Title}" Width="100"/>
-                <DataGridTextColumn Header="City" Binding="{Binding Path=City}" Width="100"/>
-                <DataGridTextColumn Header="ReportsTo" Binding="{Binding Path=ReportsTo}" Width="100"/>
+                <DataGridTextColumn Header="ID" Binding="{Binding EmployeeID}" Width="100"/>
+                <DataGridTextColumn Header="LastName" Binding="{Binding LastName}" Width="100"/>
+                <DataGridTextColumn Header="FirstName" Binding="{Binding FirstName}" Width="100"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="100"/>
+                <DataGridTextColumn Header="City" Binding="{Binding City}" Width="100"/>
+                <DataGridTextColumn Header="ReportsTo" Binding="{Binding ReportsTo}" Width="100"/>
                 <DataGridTextColumn></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
