@@ -39,9 +39,9 @@
             <TextBox x:Name ="txtCountry" Grid.Column="2" Grid.Row="4" Margin="5"></TextBox>
             <ComboBox x:Name ="txtReportsTo" Grid.Column="2" Grid.Row="5" Margin="5"/>
 
-            <StackPanel Grid.Column="2" Grid.Row="6" Orientation="Horizontal">
-                <Button x:Name="btnAdd" Content="Add" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,20,0" Background="#FFE3F2F4"></Button>
-                <Button x:Name="btnCancel" Content="Cancel" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFE3F2F4"></Button>
+            <StackPanel Margin="5" Grid.Column="2" Grid.Row="6" Orientation="Horizontal">
+                <Button x:Name="btnAdd" Content="Add" Width="80" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,30,0"></Button>
+                <Button x:Name="btnCancel" Content="Cancel" Width="80" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnCancel_Click"></Button>
             </StackPanel>
         </Grid>
 

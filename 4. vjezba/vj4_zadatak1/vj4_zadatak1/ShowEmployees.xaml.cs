@@ -42,5 +42,14 @@ namespace vj4_zadatak1
         {
 
         }
+
+        private void btnAdd_Click_1(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = Window.GetWindow(this) as MainWindow;
+            if (mainWindow != null)
+            {
+                mainWindow.contentPanel.Content = new AddEmployee();
+            }
+        }
     }
 }

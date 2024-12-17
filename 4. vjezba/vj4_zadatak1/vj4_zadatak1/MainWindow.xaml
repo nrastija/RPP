@@ -13,6 +13,5 @@
             <Label Content="---------------------------" FontSize="11" Height="30"/>
             <Button Content="Exit" Background="#FF8BAEDA" FontWeight="Bold" Height="28" Click="Button_Click"/>
         </StackPanel>
-        <ContentControl x:Name="contentPanel" />
-    </DockPanel>
+<ContentControl x:Name="contentPanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />    </DockPanel>
 </Window>
