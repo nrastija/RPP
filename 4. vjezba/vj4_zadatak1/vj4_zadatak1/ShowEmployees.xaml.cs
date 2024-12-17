@@ -51,5 +51,16 @@ namespace vj4_zadatak1
                 mainWindow.contentPanel.Content = new AddEmployee();
             }
         }
+
+        private void btnDelete_Click_1(object sender, RoutedEventArgs e)
+        {
+            var selected = dgEmployees.SelectedItem as Employee;
+            if (selected != null)
+            {
+                db.Employees.Remove(selected);
+                db.SaveChanges();
+                LoadEmployees();
+            }
+        }
     }
 }
