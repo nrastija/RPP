@@ -16,23 +16,23 @@ using System.Windows.Shapes;
 namespace vj4_zadatak1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ShowEmployees.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ShowEmployees : UserControl
     {
-        public MainWindow()
+        public ShowEmployees()
         {
             InitializeComponent();
         }
 
-        private void btnShowEmployees_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            contentPanel.Content = new ShowEmployees();
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+
         }
     }
 }
