@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:vj4_zadatak3"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Background="#FFEE7B7B" VerticalAlignment="Top" Height="30">
+            <Label Content="FEATURES:" Width="200" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <Button x:Name="btnShowEmployees" Width="200"  Content="Show employees" BorderThickness="0" FontWeight="Bold" Background="Transparent" Click="btnShowEmployees_Click"></Button>
+            <Button x:Name="btnNewEmployee" Width="200"  Content="New employee..." BorderThickness="0" FontWeight="Bold" Background="Transparent" Click="btnNewEmployee_Click"></Button>
+            <Button x:Name="btnExit" Width="200"  Content="Exit" BorderThickness="0" FontWeight="Bold" Background="Transparent" Click="btnExit_Click"></Button>
+        </StackPanel>
+        <ContentControl x:Name="controlPanel"/>
+
+    </DockPanel>
 </Window>
