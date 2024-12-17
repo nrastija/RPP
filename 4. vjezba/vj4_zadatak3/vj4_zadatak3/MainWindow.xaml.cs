@@ -24,5 +24,20 @@ namespace vj4_zadatak3
         {
             InitializeComponent();
         }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnShowEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            controlPanel.Content = new ShowEmployees();
+        }
+
+        private void btnNewEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            controlPanel.Content = new NewEmployee();
+        }
     }
 }

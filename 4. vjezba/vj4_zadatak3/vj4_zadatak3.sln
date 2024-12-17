@@ -3,6 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vj4_zadatak3", "vj4_zadatak3\vj4_zadatak3.csproj", "{F79647B2-0E52-471D-A687-0FAED38EC21F}"
 EndProject
 Global
@@ -20,6 +21,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7FF27B28-85AA-4560-B8AC-0FD1854A768D}
+		SolutionGuid = {7F0377B3-CDF2-41CB-858A-AB875432147E}
 	EndGlobalSection
 EndGlobal
