@@ -46,7 +46,7 @@
 
             <StackPanel Grid.Column="1" Grid.Row="8" Margin="5" HorizontalAlignment="Center" Orientation="Horizontal">
                 <Button x:Name="btnSave" Content="Save"  FontWeight="Bold" Width="80" Background="#FF823333" Foreground="White" Margin="0,0,5,0"></Button>
-                <Button x:Name="btnCancel" Content="Cancel" FontWeight="Bold" Width="80" Background="#FF823333" Foreground="White"></Button>
+                <Button x:Name="btnCancel" Content="Cancel" FontWeight="Bold" Width="80" Background="#FF823333" Foreground="White" Click="btnCancel_Click"></Button>
             </StackPanel>
         </Grid>
     </DockPanel>

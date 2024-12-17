@@ -37,7 +37,7 @@ namespace vj4_zadatak3
 
         private void btnNewEmployee_Click(object sender, RoutedEventArgs e)
         {
-
+            controlPanel.Content = new NewEmployee();
         }
     }
 }

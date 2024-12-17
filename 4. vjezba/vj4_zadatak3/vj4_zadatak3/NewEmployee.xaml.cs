@@ -24,5 +24,18 @@ namespace vj4_zadatak3
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            var window = Window.GetWindow(this) as MainWindow;
+
+            if (window != null)
+            {
+                {
+                    window.controlPanel.Content = new ShowEmployees();
+                }
+            }
+        }
     }
 }
+
