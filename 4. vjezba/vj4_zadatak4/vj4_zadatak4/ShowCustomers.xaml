@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel Background="white" LastChildFill="true">
         <Label Content="CUSTOMERS" FontWeight="Bold" Background="#FFF4C388" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalContentAlignment="Center"></Label>
-        <Button x:Name="BtnDelete" Content="Delete" Width="120" Background="#FFF4C388" DockPanel.Dock="Bottom" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,20"></Button>
+        <Button x:Name="BtnDelete" Content="Delete" Width="120" Background="#FFF4C388" DockPanel.Dock="Bottom" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,20" Click="BtnDelete_Click"></Button>
         
         <DataGrid x:Name="DgvCustomers" AutoGenerateColumns="False" Margin="50,20,50,10">
             <DataGrid.Columns>
