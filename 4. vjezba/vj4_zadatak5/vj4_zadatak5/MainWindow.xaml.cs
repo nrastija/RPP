@@ -29,5 +29,10 @@ namespace vj4_zadatak5
         {
             Close();
         }
+
+        private void BtnShowProducts_Click(object sender, RoutedEventArgs e)
+        {
+            ControlPanel.Content = new ShowProducts();
+        }
     }
 }
