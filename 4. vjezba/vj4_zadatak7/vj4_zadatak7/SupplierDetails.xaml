@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="vj4_zadatak7.SupplierDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:vj4_zadatak7"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="130">
+    <DockPanel Background="White" LastChildFill="True">
+        <StackPanel>
+            <Label Content="SUPPLIER DETAILS:" FontWeight="Bold" Padding="10"></Label>
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="LblSupplierId" Content="SupplierID:" FontSize="10" Padding="10"></Label>
+                <TextBox x:Name="TxtId" Width="62" IsReadOnly="True" BorderThickness="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+            </StackPanel>
+
+            <Label Content="Company name:" FontSize="10" Margin="0,9,0,0"></Label>
+            <TextBox x:Name="TxtCompanyName" IsReadOnly="True" Margin="7" BorderBrush="Black"></TextBox>
+
+            <Label Content="Country" FontSize="10" Margin="0,9,0,0"></Label>
+            <TextBox x:Name="TxtCountry" IsReadOnly="True" Margin="7" BorderBrush="Black"></TextBox>
+
+            <Label Content="City:" FontSize="10" Margin="0,9,0,0"></Label>
+            <TextBox x:Name="TxtCity" IsReadOnly="True" Margin="7" BorderBrush="Black" ></TextBox>
+        </StackPanel>
+    </DockPanel>
+</UserControl>
