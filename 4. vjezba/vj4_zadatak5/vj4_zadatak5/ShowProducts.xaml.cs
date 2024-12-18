@@ -58,5 +58,15 @@ namespace vj4_zadatak5
             }
 
         }
+
+        private void BtnNew_Click(object sender, RoutedEventArgs e)
+        {
+            var window = Window.GetWindow(this) as MainWindow;
+
+            if (window != null)
+            {
+                window.ControlPanel.Content = new NewProduct();Im
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@
     <DockPanel Background="White" LastChildFill="True">
         <Label Content="Products" HorizontalContentAlignment="Center" Background="#FFD382FF" Height="50" FontSize="20" FontWeight="Bold" VerticalAlignment="Top"  VerticalContentAlignment="Center" DockPanel.Dock="Top"></Label>
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,50,20">
-            <Button x:Name="BtnNew" Width="80" Content="New..." Background="#FFD382FF" Margin="0,0,10,0"></Button>
+            <Button x:Name="BtnNew" Width="80" Content="New..." Background="#FFD382FF" Margin="0,0,10,0" Click="BtnNew_Click"></Button>
             <Button x:Name="BtnDelete" Width="80" Content="Delete" Background="#FFD382FF" Click="BtnDelete_Click"></Button>
         </StackPanel>
         <DataGrid x:Name="DgvProducts" Margin="50,20,50,20"></DataGrid>
