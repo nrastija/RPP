@@ -10,7 +10,7 @@
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="40" Background="Bisque" VerticalAlignment="Top">
             <Label FontWeight="Bold" Content="FEATURES: " Width="200" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
             <Button x:Name="BtnShowCustomers" Content="Show customers" BorderThickness="0" Width="200" Background="Transparent" FontWeight="Bold" Click="BtnShowCustomers_Click"></Button>
-            <Button x:Name="BtnNewCustomer" Content="New customer..." BorderThickness="0" Width="200" Background="Transparent" FontWeight="Bold"></Button>
+            <Button x:Name="BtnNewCustomer" Content="New customer..." BorderThickness="0" Width="200" Background="Transparent" FontWeight="Bold" Click="BtnNewCustomer_Click"></Button>
             <Button x:Name="BtnExit" Content="Exit" BorderThickness="0" Width="200" Background="Transparent" FontWeight="Bold" Click="BtnExit_Click"></Button>
         </StackPanel>
         <ContentControl x:Name="ControlPanel"></ContentControl>

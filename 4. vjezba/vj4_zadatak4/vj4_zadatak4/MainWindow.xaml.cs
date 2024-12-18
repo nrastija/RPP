@@ -34,5 +34,10 @@ namespace vj4_zadatak4
         {
             ControlPanel.Content = new ShowCustomers();
         }
+
+        private void BtnNewCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            ControlPanel.Content = new NewCustomer();
+        }
     }
 }
