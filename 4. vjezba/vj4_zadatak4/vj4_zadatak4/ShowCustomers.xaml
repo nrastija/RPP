@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="vj4_zadatak4.ShowCustomers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:vj4_zadatak4"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel Background="white" LastChildFill="true">
+        <Label Content="CUSTOMERS" FontWeight="Bold" Background="#FFF4C388" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalContentAlignment="Center"></Label>
+        <Button x:Name="BtnDelete" Content="Delete" Width="120" Background="#FFF4C388" DockPanel.Dock="Bottom" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,20" Click="BtnDelete_Click"></Button>
+        
+        <DataGrid x:Name="DgvCustomers" AutoGenerateColumns="False" Margin="50,20,50,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="CustomerID" Binding="{Binding CustomerID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="CompanyName" Binding="{Binding CompanyName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="City" Binding="{Binding City}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Country" Binding="{Binding CustomerID}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>
