@@ -9,7 +9,7 @@
     <DockPanel LastChildFill="True">
         <StackPanel Orientation="Vertical" DockPanel.Dock="Left" Width="110" Background="#FFFFEEC3" HorizontalAlignment="Left" >
             <Label Content="FEATURES:" FontWeight="Bold" HorizontalContentAlignment="Center" Padding="10"></Label>
-            <Button x:Name="BtnShowSuppliers" BorderThickness="0" Background="Transparent" Content="Show Suppliers" FontWeight="Bold" Padding="10"></Button>
+            <Button x:Name="BtnShowSuppliers" BorderThickness="0" Background="Transparent" Content="Show Suppliers" FontWeight="Bold" Padding="10" Click="BtnShowSuppliers_Click"></Button>
             <Button x:Name="BtnExit"  BorderThickness="0" Background="Transparent" Content="Exit" FontWeight="Bold" Padding="10" Click="BtnExit_Click"></Button>
         </StackPanel>
 

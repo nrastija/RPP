@@ -16,23 +16,21 @@ using System.Windows.Shapes;
 namespace vj4_zadatak7
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ShowSuppliers.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ShowSuppliers : UserControl
     {
-        public MainWindow()
+        private NorthwndModel db = new NorthwndModel();
+        public ShowSuppliers()
         {
             InitializeComponent();
+            LoadSuppliers();
         }
 
-        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        private void LoadSuppliers()
         {
-            Close();
-        }
-
-        private void BtnShowSuppliers_Click(object sender, RoutedEventArgs e)
-        {
-            ControlPanelMain.Content = new ShowSuppliers();
+            var suppliers = db.Suppliers.ToList();
+            DgvSuppliers.ItemsSource = suppliers;
         }
     }
 }
