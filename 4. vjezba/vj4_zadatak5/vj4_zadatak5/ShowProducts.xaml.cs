@@ -39,5 +39,24 @@ namespace vj4_zadatak5
 
             DgvProducts.ItemsSource = products.ToList();
         }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedID = DgvProducts.SelectedItem.GetType().GetProperty("ProductID").GetValue(DgvProducts.SelectedItem);
+
+            var productDelete = db.Products.Find(selectedID);
+
+            if (productDelete != null)
+            {
+                db.Products.Remove(productDelete);
+                db.SaveChanges();
+                LoadProducts();
+            }
+            else
+            {
+                MessageBox.Show("Potrebno je izabrati proizvod za brisanje");
+            }
+
+        }
     }
 }
