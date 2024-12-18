@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:vj4_zadatak7"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel LastChildFill="True">
+    <DockPanel LastChildFill="False">
         <StackPanel Orientation="Vertical" DockPanel.Dock="Left" Width="110" Background="#FFFFEEC3" HorizontalAlignment="Left" >
             <Label Content="FEATURES:" FontWeight="Bold" HorizontalContentAlignment="Center" Padding="10"></Label>
             <Button x:Name="BtnShowSuppliers" BorderThickness="0" Background="Transparent" Content="Show Suppliers" FontWeight="Bold" Padding="10" Click="BtnShowSuppliers_Click"></Button>
             <Button x:Name="BtnExit"  BorderThickness="0" Background="Transparent" Content="Exit" FontWeight="Bold" Padding="10" Click="BtnExit_Click"></Button>
         </StackPanel>
 
-        <ContentControl x:Name="ControlPanelMain"></ContentControl>
+
         <ContentControl x:Name="ControlPanelDetails" DockPanel.Dock="Right" Width="130" HorizontalAlignment="Right"></ContentControl>
+        <ContentControl x:Name="ControlPanelMain"></ContentControl>
+        
     </DockPanel>
 </Window>

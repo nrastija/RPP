@@ -20,9 +20,21 @@ namespace vj4_zadatak7
     /// </summary>
     public partial class SupplierDetails : UserControl
     {
-        public SupplierDetails()
+        private NorthwndModel db = new NorthwndModel();
+        private Supplier targetedSupplier;
+        public SupplierDetails(Supplier targetedSupplier)
         {
             InitializeComponent();
+            this.targetedSupplier = targetedSupplier;
+            LoadContent();
+        }
+
+        private void LoadContent()
+        {
+            TxtId.Text = targetedSupplier.SupplierID.ToString();
+            TxtCompanyName.Text = targetedSupplier.CompanyName;
+            TxtCountry.Text = targetedSupplier.Country;
+            TxtCity.Text = targetedSupplier.City;
         }
     }
 }

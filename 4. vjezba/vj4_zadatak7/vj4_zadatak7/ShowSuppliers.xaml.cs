@@ -21,6 +21,7 @@ namespace vj4_zadatak7
     public partial class ShowSuppliers : UserControl
     {
         private NorthwndModel db = new NorthwndModel();
+
         public ShowSuppliers()
         {
             InitializeComponent();
@@ -31,6 +32,24 @@ namespace vj4_zadatak7
         {
             var suppliers = db.Suppliers.ToList();
             DgvSuppliers.ItemsSource = suppliers;
+        }
+
+        private void BtnShowDetails_Click(object sender, RoutedEventArgs e)
+        {
+            var window = Window.GetWindow(this) as MainWindow;
+            
+            var supplier = DgvSuppliers.SelectedItem as Supplier;
+
+            if (supplier == null)
+            {
+                MessageBox.Show("Potrebno je izabrati dobavljaca.");
+                return;
+            }
+
+            if (window != null)
+            {
+                window.ControlPanelDetails.Content = new SupplierDetails(supplier);
+            }
         }
     }
 }

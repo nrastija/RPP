@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel Background="White" LastChildFill="True">
         <Label Content="Suppliers:" DockPanel.Dock="Top" FontWeight="Bold" FontSize="18" Margin="30,29,0,0"></Label>
-        <Button x:Name="BtnShowDetails" Width="100" Height="30" Background="#FFFFEEC3" Content="Show details..." DockPanel.Dock="Bottom" HorizontalAlignment="Right" Margin="0,0,40,30" />
+        <Button x:Name="BtnShowDetails" Width="100" Height="30" Background="#FFFFEEC3" Content="Show details..." DockPanel.Dock="Bottom" HorizontalAlignment="Right" Margin="0,0,40,30" Click="BtnShowDetails_Click" />
         <DataGrid x:Name="DgvSuppliers" Margin="40,10,40, 10"></DataGrid>
     </DockPanel>
 </UserControl>

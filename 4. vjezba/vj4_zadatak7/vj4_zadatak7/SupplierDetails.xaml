@@ -11,7 +11,7 @@
             <Label Content="SUPPLIER DETAILS:" FontWeight="Bold" Padding="10"></Label>
             <StackPanel Orientation="Horizontal">
                 <Label x:Name="LblSupplierId" Content="SupplierID:" FontSize="10" Padding="10"></Label>
-                <TextBox x:Name="TxtId" Width="62" IsReadOnly="True" BorderThickness="0" HorizontalContentAlignment="Center"></TextBox>
+                <TextBox x:Name="TxtId" Width="62" IsReadOnly="True" BorderThickness="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
             </StackPanel>
 
             <Label Content="Company name:" FontSize="10" Margin="0,9,0,0"></Label>
