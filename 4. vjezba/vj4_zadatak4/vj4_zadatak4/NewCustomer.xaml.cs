@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -54,5 +55,29 @@ namespace vj4_zadatak4
                 window.ControlPanel.Content = new ShowCustomers();
             }
         }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            var newCustomer = new Customer
+            {
+                CustomerID = TxtId.Text,
+                CompanyName = TxtCompanyName.Text,
+                City = CmbCity.SelectedItem.ToString(),
+                Country = CmbCountry.SelectedItem.ToString(),
+            };
+
+            if (newCustomer.CustomerID == null || newCustomer.CompanyName == null ||
+                newCustomer.City == null || newCustomer.Country == null)
+            {
+                MessageBox.Show("Potrebno je unesti sve podatke.");
+                return;
+            }
+
+            db.Customers.Add(newCustomer);
+            db.SaveChanges();
+
+            ShowCustomersWindow();
+        }
+
     }
 }
