@@ -7,15 +7,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel Background="white" LastChildFill="true">
-        <Label Content="CUSTOMERS" FontWeight="Bold" Background="Bisque" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalContentAlignment="Center"></Label>
-        <Button x:Name="BtnDelete" Content="Delete" Width="120" Background="Bisque" DockPanel.Dock="Bottom" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,20"></Button>
+        <Label Content="CUSTOMERS" FontWeight="Bold" Background="#FFF4C388" DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalContentAlignment="Center"></Label>
+        <Button x:Name="BtnDelete" Content="Delete" Width="120" Background="#FFF4C388" DockPanel.Dock="Bottom" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,50,20" ButtonBase.Click="BtnDelete_Click"></Button>
         
-        <DataGrid x:Name="DgvCustomers" Margin="50,20,50,10">
+        <DataGrid x:Name="DgvCustomers" AutoGenerateColumns="False" Margin="50,20,50,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="CustomerID" Binding="{Binding CustomerID}"></DataGridTextColumn>
                 <DataGridTextColumn Header="CompanyName" Binding="{Binding CompanyName}"></DataGridTextColumn>
                 <DataGridTextColumn Header="City" Binding="{Binding City}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Country" Binding="{Binding Country}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Country" Binding="{Binding CustomerID}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </DockPanel>
