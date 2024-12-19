@@ -20,9 +20,24 @@ namespace vj4_zadatak6
     /// </summary>
     public partial class ShowProducts : UserControl
     {
+        private NorthwndModel db = new NorthwndModel();
         public ShowProducts()
         {
             InitializeComponent();
+            LoadProducts();
+        }
+
+        private void LoadProducts()
+        {
+            var products = db.Products.Select(p => new
+            {
+                p.ProductID,
+                p.ProductName,
+                Category = p.Category.CategoryName,
+                Supplier = p.Supplier.CompanyName
+            });
+
+            DgvProducts.ItemsSource = products.ToList();
         }
     }
 }

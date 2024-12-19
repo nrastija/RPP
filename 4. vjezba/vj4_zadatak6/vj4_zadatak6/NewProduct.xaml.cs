@@ -16,28 +16,23 @@ using System.Windows.Shapes;
 namespace vj4_zadatak6
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for NewProduct.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewProduct : UserControl
     {
-        public MainWindow()
+        public NewProduct()
         {
             InitializeComponent();
         }
 
-        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
-            Close();
-        }
+            var window = Window.GetWindow(this) as MainWindow;
 
-        private void BtnShowProducts_Click(object sender, RoutedEventArgs e)
-        {
-            ControlPanel.Content = new ShowProducts();
-        }
-
-        private void BtnNewProduct_Click(object sender, RoutedEventArgs e)
-        {
-            ControlPanel.Content = new NewProduct();
+            if (window != null)
+            {
+                window.ControlPanel.Content = new ShowProducts();
+            }
         }
     }
 }
