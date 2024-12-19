@@ -24,5 +24,10 @@ namespace vj4_zadatak6
         {
             InitializeComponent();
         }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
