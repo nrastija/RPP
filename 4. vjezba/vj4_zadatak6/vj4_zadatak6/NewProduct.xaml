@@ -33,7 +33,7 @@
             <ComboBox Grid.Column ="2" Grid.Row="3" Margin= "15"  x:Name="CmbSupplier"></ComboBox>
 
              <StackPanel Grid.Column="2" Grid.Row="4" HorizontalAlignment="center" Margin="15" Orientation="Horizontal">
-                 <Button x:Name="BtnSave" Content="Save" DockPanel.Dock="Bottom" FontWeight="Bold" Background="#FFFBB1B1" Width="100" Margin="0,0,15,0"></Button>
+                 <Button x:Name="BtnSave" Content="Save" DockPanel.Dock="Bottom" FontWeight="Bold" Background="#FFFBB1B1" Width="100" Margin="0,0,15,0" Click="BtnSave_Click"></Button>
                  <Button x:Name="BtnCancel" Content="Cancel" DockPanel.Dock="Bottom" FontWeight="Bold" Background="#FFFBB1B1" Width="100" Click="BtnCancel_Click"></Button>
              </StackPanel>
 
