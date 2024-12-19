@@ -42,7 +42,8 @@ namespace vj4_zadatak5
 
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
-            var selectedID = DgvProducts.SelectedItem.GetType().GetProperty("ProductID").GetValue(DgvProducts.SelectedItem);
+            var selectedID = DgvProducts.SelectedItem.GetType().GetProperty("ProductID")
+                .GetValue(DgvProducts.SelectedItem);
 
             var productDelete = db.Products.Find(selectedID);
 
@@ -65,7 +66,7 @@ namespace vj4_zadatak5
 
             if (window != null)
             {
-                window.ControlPanel.Content = new NewProduct();Im
+                window.ControlPanel.Content = new NewProduct();
             }
         }
     }

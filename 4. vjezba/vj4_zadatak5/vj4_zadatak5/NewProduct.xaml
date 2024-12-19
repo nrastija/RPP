@@ -35,7 +35,7 @@
             <ComboBox x:Name="CmbSupplier" Grid.Column="1" Grid.Row="3" Margin="15" BorderBrush="Black" ></ComboBox>
 
             <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center"  Margin ="10">
-                <Button x:Name="BtnSave" Width="80" Content="Save" Background="#FFD382FF" Margin="0,0,9.9,0"/>
+                <Button x:Name="BtnSave" Width="80" Content="Save" Background="#FFD382FF" Margin="0,0,9.9,0" Click="BtnSave_Click"/>
                 <Button x:Name="BtnCancel" Width="80" Content="Cancel" Background="#FFD382FF" Click="BtnCancel_Click"></Button>
             </StackPanel>
         </Grid>
