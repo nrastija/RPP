@@ -9,9 +9,11 @@
     <DockPanel LastChildFill="True">
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Height="50" Background="#FFFBB1B1" VerticalAlignment="Top">
             <Label Content="FEATURES" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="200"></Label>
-            <Button x:Name="BtnShowProducts" Content="Show products" Background="Transparent" Width="200" FontWeight="Bold" BorderThickness="0"></Button>
+            <Button x:Name="BtnShowProducts" Content="Show products" Background="Transparent" Width="200" FontWeight="Bold" BorderThickness="0" Click="BtnShowProducts_Click"></Button>
             <Button x:Name="BtnNewProduct" Content="New product..." Background="Transparent" Width="200" FontWeight="Bold" BorderThickness="0" ></Button>
             <Button x:Name="BtnExit" Content="Exit" Background="Transparent" Width="200" FontWeight="Bold" BorderThickness="0" Click="BtnExit_Click"></Button>
         </StackPanel>
+
+        <ContentControl x:Name="ControlPanel"></ContentControl>
     </DockPanel>
 </Window>
