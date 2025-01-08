@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using Entities.Accounts;
 using Entities.Clients;
 
 namespace Tests
@@ -18,6 +19,17 @@ namespace Tests
             
         }
 
-        
+        [TestMethod]
+        public void ForeignAccount_Balance_BalanceRemovedByWithdraw()
+        {
+            //Arrange
+            ForeignAccount account = new ForeignAccount("555", 1000, null, null);
+
+            //Act
+            account.Withdraw(250);
+
+            //Assert
+            Assert.AreEqual(750, account.Balance, "Balance has not been withdrawn");
+        }
     }
 }
