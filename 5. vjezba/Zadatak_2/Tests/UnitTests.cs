@@ -66,5 +66,18 @@ namespace Tests
             Assert.AreEqual("OIB needs to have 11 characters!", ex.Message);
 
         }
+
+        [TestMethod]
+        public void IbanGenerator_GenerateIBAN_15CharacterStringWithFirstTwoLettersHR()
+        {
+            //Arrange && Act
+            var service = IbanGenerator.GenerateIBAN();
+
+            //Assert
+            Assert.AreEqual(15, service.Length, "String is not 15 characters long.");
+            Assert.IsTrue(service.StartsWith("HR"), "Service does not start with HR.");
+            
+        }
     }
+
 }

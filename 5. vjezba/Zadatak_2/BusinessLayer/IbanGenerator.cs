@@ -12,7 +12,7 @@ namespace BusinessLayer
         {
             string iban = "HR";
             Random r = new Random();
-            for (int i = 0; i < 14; i++)
+            for (int i = 1; i < 14; i++)
             {
                 iban += r.Next(0, 9);
             }
