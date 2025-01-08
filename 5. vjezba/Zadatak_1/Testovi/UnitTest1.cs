@@ -59,5 +59,22 @@ namespace Testovi
             //Assert
             Assert.AreEqual("Client is not provided!", ex.Message);
         }
+
+        [TestMethod]
+        public void ClientService_UpdateBasicClient_UpdateWorks()
+        {
+            //Arrange
+            ClientService clientService = new ClientService();
+            BasicClient client = new BasicClient("0101", null, null);
+            BasicClient afterUpdateClient = new BasicClient("11111111111", "Pero", "Perić");
+
+            //Act
+            clientService.UpdateBasicClient(client, "11111111111", "Pero", "Perić");
+
+            //Assert
+            Assert.AreEqual(client.OIB, "11111111111", "OIB is not updated");
+            Assert.AreEqual(client.FirstName, "Pero", "First name is not updated");
+            Assert.AreEqual(client.LastName, "Perić", "Last name is not updated");
+        }
     }
 }
