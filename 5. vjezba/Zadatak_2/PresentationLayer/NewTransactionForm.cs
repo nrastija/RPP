@@ -132,19 +132,29 @@ namespace PresentationLayer
 
         private void btnExecute_Click(object sender, EventArgs e)
         {
-            var transactionService = new TransactionService();
+            try
+            {
 
-            double amount = double.Parse(txtAmount.Text);
-            if (_payerAccount != null && _receiverAccount != null && amount > 0)
-            {
-                transactionService.MakePayment(_payerAccount, _receiverAccount, amount);
-                Close();
+                var transactionService = new TransactionService();
+
+                double amount = double.Parse(txtAmount.Text);
+                if (_payerAccount != null && _receiverAccount != null && amount > 0)
+                {
+                    transactionService.MakePayment(_payerAccount, _receiverAccount, amount);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Please enter required data!");
+                }
             }
-            else
+            catch (TransactionException ex)
             {
-                MessageBox.Show("Please enter required data!");
+                MessageBox.Show(ex.Message);
+
             }
-            
+
+
         }
     }
 }

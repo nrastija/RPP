@@ -28,9 +28,15 @@ namespace BusinessLayer
             double amountToPay = amount;
             double amountToRecieve = exchangeService.ChangeMoney(amount, payerAccount.Currency, recieverAccount.Currency);
 
+            if (payerAccount == recieverAccount)
+            {
+                throw new TransactionException("Payer and reciever account can't be the same!");
+            }
+
+
             var transaction = new Transaction(payerAccount, recieverAccount, amountToPay, amountToRecieve);
             transaction.Execute();
-
+            
             UnitOfWork.TransactionRepository.Add(transaction);
         }
     }
