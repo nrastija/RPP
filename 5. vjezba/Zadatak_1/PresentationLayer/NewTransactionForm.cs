@@ -114,7 +114,7 @@ namespace PresentationLayer
             ChooseClientForm form = new ChooseClientForm();
             form.ShowDialog();
 
-            _payerClient = form.ChosenClient;
+            _receiverClient = form.ChosenClient;
             ShowReceiverClient();
         }
 

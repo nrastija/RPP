@@ -4,8 +4,10 @@ using Entities.Exchange;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BusinessLayer
 {
@@ -33,6 +35,7 @@ namespace BusinessLayer
             }
             else
             {
+                MessageBox.Show("Već postoji valuta s tom šifrom u bazi podataka.");
                 new CurrencyException("Currency with that code or country already exists!");
             }
         }
