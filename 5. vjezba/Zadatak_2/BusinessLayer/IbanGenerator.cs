@@ -8,7 +8,7 @@ namespace BusinessLayer
 {
     public static class IbanGenerator
     {
-        public string GenerateIBAN()
+        public static string GenerateIBAN()
         {
             string iban = "HR";
             Random r = new Random();

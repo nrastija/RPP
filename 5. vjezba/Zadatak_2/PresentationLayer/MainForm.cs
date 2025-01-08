@@ -23,7 +23,7 @@ namespace PresentationLayer
 
         private void InitializeTestTransactions()
         {
-            AccountService accountService;
+            AccountService accountService = new AccountService();
             var transactionService = new TransactionService();
             transactionService.MakePayment(accountService.GetAccount("HR11"), accountService.GetAccount("HR12"), 550);
             transactionService.MakePayment(accountService.GetAccount("HR11"), accountService.GetAccount("HR13"), 1200);

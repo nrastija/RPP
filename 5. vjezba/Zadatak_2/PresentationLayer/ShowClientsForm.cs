@@ -49,7 +49,7 @@ namespace PresentationLayer
         private IClient GetSelectedClient()
         {
             IClient client = null;
-            if (dgvClients.SelectedRows > 0)
+            if (dgvClients.SelectedRows.Count > 0)
             {
                 client = dgvClients.SelectedRows[0].DataBoundItem as IClient;
             }

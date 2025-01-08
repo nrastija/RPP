@@ -41,7 +41,7 @@ namespace BusinessLayer
             return IbanGenerator.GenerateIBAN();
         }
 
-        public List<IAccount> GetClientAccounts(IClient client)
+        public  List<IAccount> GetClientAccounts(IClient client)
         {
             return UnitOfWork.AccountRepository.GetByClient(client);
         }

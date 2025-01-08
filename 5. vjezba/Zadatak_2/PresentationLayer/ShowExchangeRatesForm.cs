@@ -53,7 +53,7 @@ namespace PresentationLayer
                 MessageBox.Show("You have to select exchange rate!");
             }
 
-            var form = new EditExchangeRateForm();
+            var form = new EditExchangeRateForm(rate);
             form.ShowDialog();
             ShowExchangeRates();
         }

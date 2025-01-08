@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PresentationLayer
 {
-    public class ChooseAccountForm : Form
+    public partial class ChooseAccountForm : Form
     {
         public IAccount chosenAccount { get; set; }
         private IClient _client;
@@ -26,7 +26,8 @@ namespace PresentationLayer
 
         private void ChooseAccountForm_Load(object sender, EventArgs e)
         {
-            var clientAccounts = AccountService.GetClientAccounts(_client);
+            var accountService = new AccountService();
+            var clientAccounts = accountService.GetClientAccounts(_client);
 
             dgvAccounts.DataSource = clientAccounts;
         }
@@ -41,7 +42,7 @@ namespace PresentationLayer
         {
             if (dgvAccounts.CurrentRow != null)
             {
-                return dgvAccounts.CurrentRow.DataBoundItem;
+                return dgvAccounts.CurrentRow.DataBoundItem as IAccount;
             }
             return null;
         }

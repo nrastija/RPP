@@ -15,7 +15,7 @@ namespace PresentationLayer
 {
     public partial class ChooseClientForm : Form
     {
-        public IClient ChosenClient { get; }
+        public IClient ChosenClient { get; set; }
 
         public ChooseClientForm()
         {
