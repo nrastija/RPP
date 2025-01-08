@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using BusinessLayer;
+using BusinessLayer.Exceptions;
 using Entities.Accounts;
 using Entities.Clients;
 
@@ -30,6 +32,39 @@ namespace Tests
 
             //Assert
             Assert.AreEqual(750, account.Balance, "Balance has not been withdrawn");
+        }
+
+        [TestMethod]
+        public void ClientService_UpdateBasicClient_OIBLengthExceptionThrown()
+        {
+            /*
+            try
+            {
+                //Arrange
+                ClientService clientService = new ClientService();
+                BasicClient client = new BasicClient("941", "test", "test");
+                
+                //Act
+                clientService.UpdateBasicClient(client, "444", "test", "test");
+            }
+            //Assert
+            catch (ClientException ex)
+            {
+                Assert.AreEqual("OIB needs to have 11 characters!", ex.Message, "Message is not correct.");
+            }
+
+            */
+
+            // Arrange
+            ClientService clientService = new ClientService();
+            BasicClient client = new BasicClient("941", "test", "test");
+
+            // Act & Assert
+            var ex = Assert.ThrowsException<ClientException>(() =>
+                clientService.UpdateBasicClient(client, "444", "test", "test"));
+
+            Assert.AreEqual("OIB needs to have 11 characters!", ex.Message);
+
         }
     }
 }
