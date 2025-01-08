@@ -8,7 +8,7 @@ namespace BusinessLayer.Exceptions
 {
     public class ClientException : BankException
     {
-        public ClientException(string message) : base()
+        public ClientException(string message) : base(message)
         {
         }
     }

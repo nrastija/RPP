@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Exceptions
 {
-    public class CurrencyException : BankException
+    public class ExchangeRateException : BankException
     {
-        public CurrencyException(string message) : base(message)
+        public ExchangeRateException(string message) : base(message)
         {
 
         }

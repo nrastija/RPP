@@ -46,6 +46,7 @@
     <Compile Include="Exceptions\AccountException.cs" />
     <Compile Include="Exceptions\ClientException.cs" />
     <Compile Include="Exceptions\CurrencyException.cs" />
+    <Compile Include="Exceptions\ExchangeRateException.cs" />
     <Compile Include="Exceptions\TransactionException.cs" />
     <Compile Include="IbanGenerator.cs" />
     <Compile Include="CurrencyService.cs" />
