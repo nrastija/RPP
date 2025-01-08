@@ -35,9 +35,17 @@ namespace BusinessLayer
         public void CreateExchangeRate(string currencyName, double value)
         {
             var currency = UnitOfWork.CurrencyRepository.GetByCode(currencyName);
+            var alreadyExists = UnitOfWork.CurrencyRepository.GetByCode(currencyName);
+
+            if (alreadyExists != null)
+            {
+                throw new ExchangeRateException("Exchange rate already exists for this currency!");
+            }
 
             var exchangeRate = new ExchangeRate(currency, value);
+
             UnitOfWork.ExchangeRateRepository.Add(exchangeRate);
+
         }
     }
 }

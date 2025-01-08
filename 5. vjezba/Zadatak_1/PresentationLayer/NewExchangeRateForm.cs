@@ -43,13 +43,21 @@ namespace PresentationLayer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            double rate = double.Parse(txtRate.Text);
-            var currency = cmbCurrency.SelectedItem as Currency;
+            try
+            {
+                double rate = double.Parse(txtRate.Text);
+                var currency = cmbCurrency.SelectedItem as Currency;
 
-            var exchangeService = new ExchangeService();
-            exchangeService.CreateExchangeRate(currency.Code, rate);
-            
-            Close();
+                var exchangeService = new ExchangeService();
+                exchangeService.CreateExchangeRate(currency.Code, rate);
+
+                Close();
+            }
+            catch (ExchangeRateException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }
