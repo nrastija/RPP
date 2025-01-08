@@ -30,7 +30,7 @@ namespace PresentationLayer
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string iban = txtIBAN;
+            string iban = txtIBAN.Text;
             double balance = double.Parse(txtBalance.Text);
             double overdraft = double.Parse(txtOverdraft.Text);
 

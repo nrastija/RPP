@@ -8,7 +8,7 @@ namespace BusinessLayer.Exceptions
 {
     public class BankException : ApplicationException
     {
-        public BankException() : base(message)
+        public BankException() : base()
         {
 
         }

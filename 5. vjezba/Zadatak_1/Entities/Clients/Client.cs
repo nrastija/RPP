@@ -9,9 +9,9 @@ namespace Entities.Clients
     public abstract class Client : IClient
     {
         public abstract string Description { get; }
-        public ClientType Type { get; protected set; }
+        public ClientType Type { get;  set; }
         public string OIB { get; set; }
-        public string FirstName { get; private set; }
+        public string FirstName { get;  set; }
         public string LastName { get; set; }
 
         public Client(string oib, string firstName, string lastName)

@@ -8,7 +8,7 @@ namespace BusinessLayer.Exceptions
 {
     public class CurrencyException : BankException
     {
-        public CurrencyException(string message) : base(message)
+        public CurrencyException(string message) : base()
         {
 
         }

@@ -59,7 +59,7 @@ namespace PresentationLayer
         private void btnShowAccounts_Click(object sender, EventArgs e)
         {
             var chosenClient = GetSelectedClient();
-            var form = new ShowClientAccountsForm();
+            var form = new ShowClientAccountsForm(chosenClient);
             form.ShowDialog();
         }
     }
