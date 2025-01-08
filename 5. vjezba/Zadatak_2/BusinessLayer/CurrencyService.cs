@@ -25,8 +25,9 @@ namespace BusinessLayer
 
         public void AddCurrency(string code, string country)
         {
-            bool alreadyExists = UnitOfWork.CurrencyRepository.GetByCode(country) != null;
-            if(alreadyExists == false)
+            var alreadyExists = UnitOfWork.CurrencyRepository.GetByCode(country);
+
+            if(alreadyExists != null)
             {
                 var currency = new Currency(code, country);
                 UnitOfWork.CurrencyRepository.Add(currency);

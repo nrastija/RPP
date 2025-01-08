@@ -9,13 +9,9 @@ namespace PresentationLayer
     {
         public IClient Client { get; private set; }
 
-        public EditClientForm()
-        {
-            InitializeComponent();
-        }
-
         public EditClientForm(IClient client)
         {
+            InitializeComponent();
             Client = client;
         }
 

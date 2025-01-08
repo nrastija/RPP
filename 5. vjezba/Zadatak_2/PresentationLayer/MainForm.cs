@@ -36,7 +36,7 @@ namespace PresentationLayer
 
         private void ShowTransactionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new ShowTransactionsForm();
+            var form = new ShowTransactionsForm(null);
             form.MdiParent = this;
             form.Show();
         }

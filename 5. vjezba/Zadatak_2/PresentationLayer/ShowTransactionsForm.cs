@@ -17,14 +17,10 @@ namespace PresentationLayer
         private IAccount selectedAccount;
         public IAccount SelectedAccount { get => selectedAccount; set => selectedAccount = value; }
 
-        public ShowTransactionsForm()
-        {
-            InitializeComponent();
-        }
-
         public ShowTransactionsForm(IAccount account)
         {
             InitializeComponent();
+            selectedAccount = account;
         }
 
         private void ShowTransactionsForm_Load(object sender, EventArgs e)
