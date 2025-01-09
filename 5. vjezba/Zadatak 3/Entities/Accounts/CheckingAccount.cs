@@ -10,7 +10,7 @@ namespace Entities.Accounts
 {
     public class CheckingAccount : Account
     {
-        public override double Overdraft { get; set; }
+        public double Overdraft { get; set; }
         public override double AvailableFunds
         {
             get { return CalculateAvailableFunds(); }

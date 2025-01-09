@@ -35,7 +35,7 @@ namespace PresentationLayer
             var accountService = new AccountService();
             try
             {
-                accountService.CreateForeignCurrencyAccount(iban, balance, ChosenCurrency, ChosenClient);
+                accountService.CreateForeignCurrencyAccount(iban, balance, _chosenCurrency, ChosenClient);
                 Close();
             }
             catch (AccountException ex)
@@ -50,7 +50,7 @@ namespace PresentationLayer
             form.ShowDialog();
 
             _chosenCurrency = form.ChosenCurrency;
-            if(_chosenCurrency = null)
+            if(_chosenCurrency != null)
             {
                 txtCurrency.Text = _chosenCurrency.ToString();
             }
@@ -67,7 +67,7 @@ namespace PresentationLayer
 
             txtIBAN.Text = iban;
             txtOwner.Text = ChosenClient.Description;
-            txtBalance.Text = 0;
+            txtBalance.Text ="0";
         }
 
         private void NewForeignAccountForm_Load(object sender, EventArgs e)

@@ -38,7 +38,7 @@ namespace PresentationLayer
             txtFirstname.Text = client.FirstName;
             txtLastname.Text = client.LastName;
             cmbClientType.SelectedIndex = 0;
-            txtCompany.Enabled = 'false';
+            txtCompany.Enabled = false;
         }
 
         private void ShowPremiumClient(PremiumClient client)
