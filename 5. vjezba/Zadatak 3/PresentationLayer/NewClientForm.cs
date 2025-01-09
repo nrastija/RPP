@@ -14,6 +14,10 @@ namespace PresentationLayer
 {
     public partial class NewClientForm : Form
     {
+        public NewClientForm()
+        {
+            InitializeComponent();
+        }
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Close();

@@ -45,7 +45,7 @@ namespace PresentationLayer
                 var currencyService = new CurrencyService();
                 currencyService.AddCurrency(txtCode.Text, txtCountry.Text);
             }
-            catch (ClientException ex)
+            catch (CurrencyException ex)
             {
                 MessageBox.Show(ex.Message);
             }

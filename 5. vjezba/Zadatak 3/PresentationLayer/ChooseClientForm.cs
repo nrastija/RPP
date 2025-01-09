@@ -38,7 +38,7 @@ namespace PresentationLayer
         {
             if (dgvClients.CurrentRow != null)
             {
-                return dgvClients.CurrentRow as IClient;
+                return dgvClients.CurrentRow.DataBoundItem as IClient;
             }
             return null;
         }
