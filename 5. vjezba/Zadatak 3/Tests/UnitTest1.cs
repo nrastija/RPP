@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using BusinessLayer;
+using BusinessLayer.Exceptions;
 using Entities.Accounts;
 using Entities.Exchange;
 
@@ -31,6 +33,21 @@ namespace Tests
 
             //Assert
             Assert.AreEqual(550, account.Balance);
+        }
+
+        [TestMethod]
+        public void ClientService_UpdatePremiumClient_ClientExceptionThrown()
+        {
+            try
+            {
+                ClientService service = new ClientService();
+
+                service.UpdatePremiumClient(null, "1111", "aa", "aa", "aa");
+            }
+            catch (ClientException ex)
+            {
+                Assert.AreEqual("Client is not provided!", ex.Message);
+            }
         }
     }
 }
