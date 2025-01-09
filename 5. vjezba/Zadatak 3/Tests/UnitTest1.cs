@@ -1,8 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Diagnostics;
 using BusinessLayer;
 using BusinessLayer.Exceptions;
 using Entities.Accounts;
+using Entities.Clients;
 using Entities.Exchange;
 
 namespace Tests
@@ -48,6 +50,19 @@ namespace Tests
             {
                 Assert.AreEqual("Client is not provided!", ex.Message);
             }
+        }
+
+        [TestMethod]
+        public void ClientService_UpdateBasicClient_UpdateWorks()
+        {
+            ClientService service = new ClientService();
+            BasicClient client = new BasicClient("111", "temp", "temp");
+
+            service.UpdateBasicClient(client, "11111111111", "Pero", "Perić");
+
+            Assert.AreEqual("11111111111", client.OIB);
+            Assert.AreEqual("Pero", client.FirstName);
+            Assert.AreEqual("Perić", client.LastName);
         }
     }
 }
